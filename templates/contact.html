@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% from 'bootstrap5/form.html'  import render_form %}
+{% block title %} H.C. Jewellers {% endblock %}
+
+{% block content %}
+
+<div class="contact_container">
+    <div class="container-fluid img-fluid"
+        style="background-image: url(static/img/Contact_Page/contact_img.jpg); background-size: cover; height: 500px;">
+        <div class="row">
+            <div class="col-12 heading py-5 py-md-5 mt-md-5 ps-md-6 contact_media">
+                EXQUISITE GEMSTONES <br> AND CUSTOM JEWELLERY
+            </div>
+            <p class="heading ps-md-6 contact_us_media" style="font-size: 30px;">Contact Us</p>
+            <p class="heading ps-md-6" style="font-size: 15px; letter-spacing: 3px;">
+                Fill Out the Form Below or <br>Call us On 8114485168
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid" style="background-color: #eeeeee;">
+    <div class="row justify-content-evenly pt-5">
+        <div class="col-11 col-md-6">
+            <p class="heading" style="font-size: 25px;">Get in Touch</p>
+        </div>
+    </div>
+
+    <div class="row justify-content-evenly">
+        <div class="col-11 col-md-6 pt-1 pb-4">
+            {{ render_form(contact) }}
+        </div>
+    </div>
+</div>
+
+
+
+
+{% include 'footers.html' %}
+
+{% endblock %}

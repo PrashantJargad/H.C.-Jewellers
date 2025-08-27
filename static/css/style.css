@@ -1,0 +1,393 @@
+.navbar-nav {
+    padding-left: 50%;
+}
+
+@font-face {
+    font-family: 'AcademyEngraved';
+    src: url('../font/AcademyEngravedLetPlain.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.text_font {
+    font-family: 'AcademyEngraved', serif;
+    font-size: 30px;
+    padding-left: 12px;
+}
+
+.nav-item {
+    padding-left: 30px;
+}
+
+.bg-body-tertiary {
+    --bs-bg-opacity: 1;
+    background-color: #537D5D !important;
+}
+
+.navbar-logo {
+    height: 60px;
+    /* Adjust as needed */
+    width: auto;
+    /* Keeps aspect ratio */
+    object-fit: contain;
+}
+
+.nav-link {
+    font-family: "Roboto", sans-serif;
+    font-weight: 354;
+    font-size: large;
+    color: white
+}
+
+.carousel {
+    height: 100vh;
+    /* instead of max-height */
+    overflow: hidden;
+}
+
+
+
+
+.rounded {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    /* or keep your styling */
+}
+
+.heading {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 40px;
+    letter-spacing: 4px;
+    font-weight: 600;
+    padding-bottom: 2px;
+}
+
+.subtitle {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 1px;
+}
+
+
+#about_container {
+    background-image: url('/static/img/About_Page/about_img.jpg');
+    background-size: cover;
+    /* Fills the container */
+    background-position: center 20%;
+    /* Centers image */
+    background-repeat: no-repeat;
+    /* Avoids repeat */
+    width: 100%;
+    height: 100vh;
+    /* Responsive height */
+    /* margin-bottom: 100px; */
+    padding-right: 15px;
+}
+
+.f_slide,
+.s_slide,
+.t_slide {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Default object positions */
+.f_slide {
+    object-position: 0px -525px;
+}
+
+
+.s_slide {
+    object-position: 0px -700px;
+}
+
+.t_slide {
+    object-position: 0px -425px;
+}
+
+.carousel {
+    height: 125vh;
+    overflow: hidden;
+}
+
+@media only screen and (max-width:480px) {
+
+    .f_slide,
+    .s_slide,
+    .t_slide {
+        object-position: 0px 0px;
+    }
+
+    .carousel {
+        height: 67vh;
+        overflow: hidden;
+    }
+}
+
+@media only screen and (min-width:480px) and (max-width:800px) {
+    .carousel {
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .f_slide,
+    .s_slide,
+    .t_slide {
+        object-position: 0px -75px;
+    }
+
+}
+
+@media only screen and (min-width:800px) and (max-width:1200px) {
+    .carousel {
+        height: 90vh;
+        overflow: hidden;
+    }
+
+    .f_slide,
+    .s_slide,
+    .t_slide {
+        object-position: 0px -75px;
+    }
+
+}
+
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* shows full image (like zooming out) */
+    /* object-position: center;  */
+    background-color: black;
+    /* fills empty space if aspect ratio differs */
+}
+
+
+.carousel-item:last-child .overlay-text {
+    position: absolute;
+    top: 50%;
+    /* vertically center */
+    left: 50%;
+    /* horizontally center */
+    transform: translate(-50%, -50%);
+    color: white;
+
+}
+
+
+
+
+
+/* Product  */
+
+/* Force a fixed height for product carousels */
+.carousel-product {
+    height: 400px;
+    /* adjust as per design */
+}
+
+/* Make carousel-inner take fixed height */
+.carousel-product-inner {
+    height: 100%;
+}
+
+/* All carousel items same height */
+.carousel-product-item {
+    height: 100%;
+}
+
+/* Ensure images cover the area */
+.carousel-product-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* crop to fill */
+    object-position: center;
+    /* center focus */
+}
+
+.cs_tx_1 {
+    position: absolute;
+    top: 45px;
+    left: 15px;
+    font-weight: bold;
+}
+
+
+.cs_tx_2 {
+    position: absolute;
+    top: 90px;
+    left: 15px;
+    font-weight: bold;
+}
+
+
+.cs_tx_3 {
+    position: absolute;
+    top: 135px;
+    left: 15px;
+    font-weight: bold;
+}
+
+
+.cs_tx_4 {
+    position: absolute;
+    top: 180px;
+    left: 15px;
+    font-weight: bold;
+}
+
+
+.cs_tx_5 {
+    position: absolute;
+    top: 45px;
+    left: 185px;
+    font-weight: bold;
+}
+
+
+.cs_tx_6 {
+    position: absolute;
+    top: 90px;
+    left: 185px;
+    font-weight: bold;
+}
+
+.cs_tx_7 {
+    position: absolute;
+    top: 135px;
+    left: 185px;
+    font-weight: bold;
+}
+
+
+.cs_tx_8 {
+    position: absolute;
+    top: 180px;
+    left: 185px;
+    font-weight: bold;
+}
+
+.cs_tx_9 {
+    position: absolute;
+    top: 225px;
+    left: 15px;
+    font-weight: bold;
+}
+
+.cs_tx_10 {
+    position: absolute;
+    top: 225px;
+    left: 175px;
+    font-weight: bold;
+}
+
+.contact_container {
+    width: 100%;
+}
+
+.ps-md-6 {
+    padding-left: 4.9rem;
+    /* adjust as needed */
+}
+
+
+#necklace {
+    width: 1000px;
+    height: auto;
+    display: block;
+    margin-left: 90px;
+    padding-top: 50px;
+}
+
+@media only screen and (max-width:1200px) {
+    #necklace {
+        width: 1000px;
+        height: auto;
+        display: block;
+        margin-left: 0px;
+        padding-top: 50px;
+    }
+}
+
+@media only screen and (min-width:1300px) {
+    #necklace {
+        width: 1000px;
+        height: auto;
+        display: block;
+        margin-left: 175px;
+        padding-top: 50px;
+    }
+}
+
+
+@media only screen and (min-width:1300px) {
+    #necklace {
+        width: 1000px;
+        height: auto;
+        display: block;
+        margin-left: 175px;
+        padding-top: 50px;
+    }
+}
+
+
+
+.contact_media {
+    font-size: 35px;
+}
+
+
+.product_mobile_page {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    border-radius: 8px;
+    background-image: url("/static/img/emerald-circle.jpg");
+    background-size: 1350px 650px;
+    background-position: -30px -10px;
+}
+
+
+
+@media only screen and (min-width:1400px) {
+    .navbar-nav {
+        padding-left: 53%;
+    }
+}
+
+
+@media only screen and (max-width:580px) {
+    .laptop_text_about {
+        margin-left: 12px;
+        padding-top: 20px;
+    }
+
+    .laptop_text_subtitle {
+        display: none;
+    }
+
+}
+
+
+@media only screen and (min-width:700px) and (max-width:1000px) {
+    .contact_media {
+        font-size: 25px;
+    }
+}
+
+
+
+@media only screen and (max-width: 480px) {
+    .product_mobile_page {
+        background-image: none;
+        /* removes image */
+    }
+}
+
+@media only screen and (min-width:700px) and (max-width:860px) {
+    .laptop_text_emerald {
+        padding-bottom: 10px;
+    }
+}

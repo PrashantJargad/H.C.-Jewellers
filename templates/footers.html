@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <hr class="text-black">
+    <div style="background-color: #fbf5ec;">
+        <div class="container-fluid">
+            <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 border-top">
+                <div class="col mb-3"> <a href="/"
+                        class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none"
+                        aria-label="Bootstrap"> <svg class="bi me-2" width="40" height="32" aria-hidden="true">
+                            <use xlink:href="#bootstrap"></use>
+                        </svg> </a>
+                    <p class="text-body-secondary text_font" style="font-size: 25px;">H.C. JEWELLERS</p>
+                </div>
+                <div class="col mb-3"></div>
+                <div class="col mb-3 text-start">
+                    <h5 class="ps-4 ms-1">Menu</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="{{ url_for('home') }}"
+                                class="nav-link p-0 text-body">Home</a></li>
+                        <li class="nav-item mb-2"><a href="{{ url_for('product') }}"
+                                class="nav-link p-0 link-dark">Product</a></li>
+                        <li class="nav-item mb-2"><a href="{{ url_for('about') }}"
+                                class="nav-link p-0 link-dark">About</a></li>
+                        <li class="nav-item mb-2"><a href="{{ url_for('contact') }}" class="nav-link p-0 link-dark">Contact</a></li>
+
+                    </ul>
+                </div>
+                <div class="col mb-3">
+                    <h5 class="ps-4 ms-1">Follow Us</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2 "><a href="https://www.instagram.com/h.c.jewellers/"
+                                class="nav-link p-0 link-primary text-decoration-underline">Instagram</a></li>
+                        <li class="nav-item mb-2"><a href="https://in.pinterest.com/hc_jewellers/"
+                                class="nav-link p-0 text-primary text-decoration-underline">Pinterest</a></li>
+                </div>
+                <div class="col mb-3">
+                    <h5 class="ps-4 ms-1">Contact Us</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">
+                            <p>Mail: hcjewellers87@gmail.com</p>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <p>Tel: +91-8114485168</p>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <p>Locatin <br>M.S.B ka rasta <br>Johari Bazar, Jaipur</p>
+                        </li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+</body>
+
+</html>

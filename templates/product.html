@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+
+{% block title %} H.C. Jewels {% endblock %}
+
+{% block content %}
+
+<div class="container-fluid product_mobile_page">
+
+    <div class="row justify-content-evenly mb-md-5 pb-md-5">
+        <div class="col-11 col-md-8 py-md-5 mt-md-5">
+            <h1 class="heading text-center mt-md-4 pt-md-4 laptop_text_emerald"
+                style=" font-size: 50px; color: #333333; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);;">Emerald</h1>
+            <br>
+            <p class="subtitle text-sm-center ms-md-5" style="color: #333333;">Step into the world of emeralds where
+                nature and artistry converge. Our handpicked
+                emeralds, each a masterpiece of Mother Earth, embody the pinnacle of elegance and sophistication.
+                Crafted with unparalleled precision, our exclusive selection showcases the rich, vibrant hues that make
+                emeralds so uniquely captivating. Explore our collection and experience the transformative power of
+                these verdant treasures, perfect for captivating your imagination and elevate your finest creations.</p>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid pt-4 mt-4 mt-md-0 pt-md-0">
+    {% for i in product %}
+    {% if loop.index0 % 2 == 0 %}
+    <div class="row justify-content-evenly">
+        {% endif %}
+
+        <div class="col-11 col-md-5 pt-md-5 mt-md-2 pt-3 pb-2">
+            <div id="carouselExampleIndicators-{{ i.id }}" class="carousel slide carousel-product" data-bs-ride="carousel">
+
+                <!-- Indicators -->
+                <div class="carousel-indicators">
+                    {% for a in range(0, i.img_count + 1) %}
+                    {% if loop.index0 == 0 %}
+                    <button type="button" data-bs-target="#carouselExampleIndicators-{{ i.id }}"
+                        data-bs-slide-to="{{ a }}" class="active" aria-current="true"
+                        aria-label="Slide {{ loop.index }}"></button>
+                    {% else %}
+                    <button type="button" data-bs-target="#carouselExampleIndicators-{{ i.id }}"
+                        data-bs-slide-to="{{ a }}" aria-label="Slide {{ loop.index }}"></button>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+
+                <!-- Slides -->
+                <div class="carousel-inner carousel-product-inner">
+                    {% for b in range(0, i.img_count) %}
+                    {% if loop.index0 == 0 %}
+                    <div class="carousel-item carousel-product-item active">
+                        <img src="static/img/Emerald/{{ i.id }}/f_img_{{ i.id }}-{{ loop.index }}.jpg"
+                            class="d-block w-100 img-fluid" alt="Couldn't Load Image">
+                    </div>
+                    {% else %}
+                    <div class="carousel-item carousel-product-item">
+                        <img src="static/img/Emerald/{{ i.id }}/f_img_{{ i.id }}-{{ loop.index }}.jpg"
+                            class="d-block w-100 img-fluid" alt="Couldn't Load Image">
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+
+
+                    <!-- Extra last slide with caption -->
+                    <div class="carousel-item carousel-product-item">
+                        <img src="static/img/Emerald/{{ i.id }}/f_img_{{ i.id }}-1.jpg" class="d-block w-100 img-fluid"
+                            alt="Couldn't Load Image">
+
+                        <div class="position-absolute top-0 start-0 w-100 h-100 bg-white opacity-50"></div>
+
+                        <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100 text-dark"
+                            style="white-space: nowrap;">
+                            <p class="cs_tx_1">Length: {{ i.length }}</p>
+                            <p class="cs_tx_2">Width: {{ i.width }}</p>
+                            <p class="cs_tx_3">Height: {{ i.height }}</p>
+                            <p class="cs_tx_4">Weight: {{ i.weight }}</p>
+                            <p class="cs_tx_5">Color: {{ i.color }}</p>
+                            <p class="cs_tx_6">Clarity: {{ i.clarity }}</p>
+                            <p class="cs_tx_7">Shape: {{ i.shape }}</p>
+                            <p class="cs_tx_8">Cut: {{ i.cut }}</p>
+                            <p class="cs_tx_9">Pieces: {{ i.pcs }}</p>
+                            <p class="cs_tx_10">Enhancements: {{ i.enhancements }}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controls -->
+                <button class="carousel-control-prev" type="button"
+                    data-bs-target="#carouselExampleIndicators-{{ i.id }}" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+
+                <button class="carousel-control-next" type="button"
+                    data-bs-target="#carouselExampleIndicators-{{ i.id }}" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+        {% if loop.index0 % 2 == 1 or loop.last %}
+    </div>
+    {% endif %}
+    {% endfor %}
+</div>
+
+{% include 'footers.html' %}
+{% endblock %}

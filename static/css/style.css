@@ -375,11 +375,11 @@
     background-position: top center;
     background-repeat: no-repeat;
     height: 650px;  /* match your image height */
-    margin: 0;
     padding: 0;
+    margin: 0px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 770px) {
     .product_mobile_page {
         background-image: none;
         margin-top: 100px;
@@ -389,11 +389,12 @@
     }
 }
 
-/* @media only screen and (min-width:1200px) {
+@media only screen and (min-width:1200px) {
     .product_mobile_page {
-        background-size: 1475px 650px;
+        padding-right: 125px;
+        padding-top: 75px;
     }
-} */
+}
 
 @media only screen and (min-width:700px) and (max-width:860px) {
     .laptop_text_emerald {

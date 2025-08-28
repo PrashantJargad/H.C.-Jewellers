@@ -1,16 +1,14 @@
 {% extends 'base.html' %}
-{% from "bootstrap5/form.html" import render_form%}
+{% from "macros.html" import render_form %}
 
-{% block title %} Add Data {% endblock %}
+{% block title %}Add Data{% endblock %}
+
 {% block content %}
-
-<div class="contianer">
+<div class="container">
     <div class="row justify-content-evenly">
         <div class="col-8 pt-5">
             {{ render_form(emerald_data_form) }}
         </div>
     </div>
 </div>
-<!-- {{ render_form(emerald_data_form) }} -->
-
 {% endblock %}

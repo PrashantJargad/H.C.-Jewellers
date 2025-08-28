@@ -1,5 +1,4 @@
 from flask import Flask, render_template, redirect, url_for
-from flask_bootstrap import Bootstrap5
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import Mapped, mapped_column, DeclarativeBase
 from sqlalchemy import String, Integer, Float
@@ -17,7 +16,7 @@ class Base(DeclarativeBase):
 
 
 app = Flask(__name__)
-Bootstrap5(app)
+
 
 # login_manager = LoginManager()
 # login_manager.init_app(app)
@@ -70,11 +69,11 @@ class Emeralds(db.Model):
 
 class Contact(db.Model):
     id: Mapped[int] = mapped_column(Integer, primary_key=True)
-    first_name: Mapped[str] = mapped_column(String)
-    last_name: Mapped[str] = mapped_column(String)
+    first_name: Mapped[str] = mapped_column(String, nullable=False)
+    last_name: Mapped[str] = mapped_column(String, nullable=True)
     email: Mapped[str] = mapped_column(String, nullable=False)
     phone_no: Mapped[int] = mapped_column(Integer, nullable=False)
-    particular_item: Mapped[str] = mapped_column(String)
+    particular_item: Mapped[str] = mapped_column(String, nullable=True)
 
 
 # with app.app_context():

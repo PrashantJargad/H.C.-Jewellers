@@ -76,8 +76,8 @@ class Contact(db.Model):
     particular_item: Mapped[str] = mapped_column(String, nullable=True)
 
 
-# with app.app_context():
-#     db.create_all()
+with app.app_context():
+    db.create_all()
 
 @app.route("/add-data", methods=["GET", "POST"])
 def add_data():

@@ -341,12 +341,7 @@
 
 
 
-@media only screen and (min-width:1200px) {
-    .product_mobile_page {
-        background-size: 1475px 650px;
-        /* removes image */
-    }
-}
+
 
 @media only screen and (min-width:1400px) {
     .navbar-nav {
@@ -380,6 +375,12 @@
     .product_mobile_page {
         background-image: none;
         /* removes image */
+    }
+}
+
+@media only screen and (min-width:1200px) {
+    .product_mobile_page {
+        background-size: 1475px 650px;
     }
 }
 

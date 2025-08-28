@@ -369,20 +369,31 @@
     }
 }
 
+.product_mobile_page {
+    background-image: url("/static/img/emerald-circle.jpg");
+    background-size: 1300px auto;   /* keep your custom width */
+    background-position: top center;
+    background-repeat: no-repeat;
+    height: 650px;  /* match your image height */
+    margin: 0;
+    padding: 0;
+}
 
-
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 600px) {
     .product_mobile_page {
         background-image: none;
+        margin-top: 100px;
+        padding-left: 20px;
+
         /* removes image */
     }
 }
 
-@media only screen and (min-width:1200px) {
+/* @media only screen and (min-width:1200px) {
     .product_mobile_page {
         background-size: 1475px 650px;
     }
-}
+} */
 
 @media only screen and (min-width:700px) and (max-width:860px) {
     .laptop_text_emerald {

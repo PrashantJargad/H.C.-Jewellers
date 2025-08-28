@@ -340,16 +340,13 @@
 }
 
 
-.product_mobile_page {
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 10px;
-    border-radius: 8px;
-    background-image: url("/static/img/emerald-circle.jpg");
-    background-size: 1350px 650px;
-    background-position: -30px -10px;
+
+@media only screen and (min-width:1200px) {
+    .product_mobile_page {
+        background-size: 1475px 650px;
+        /* removes image */
+    }
 }
-
-
 
 @media only screen and (min-width:1400px) {
     .navbar-nav {
